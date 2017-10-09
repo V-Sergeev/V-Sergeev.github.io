@@ -1,5 +1,5 @@
 var app = angular.module('resume', []);
-var off=true;
+
 var obj=[
   {
     "jobTime" : "03.09.2007 — 15.03.2016",
