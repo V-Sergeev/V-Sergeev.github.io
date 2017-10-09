@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="resume">
+
+  <head>
+    <title>Резюме</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script data-require="angular.js@1.5.x" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js" data-semver="1.5.11"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="Cntrl as fc">
+  <div class="container">
+  <div class="text-center">
+  <p class="h4">Резюме</p>
+  <strong class="h3">Сергеев Валерий Сергеевич</strong>
+  </div><br>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-xs-2 col-md-3 no-padd"><img class="img-responsive" src="http://photo-ideal.ru/uploads/images/Foto%20rezyume/Foto%20rezyume_029.jpg"></div>
+    <div class="col-xs-10 col-md-9">
+      <b>Цель:</b> соискание должности программиста<br>
+      <b>Дата рождения:</b> 25.03.1981<br>
+      <b>Город:</b> Красноярск<br>
+      <b>Семейное положение:</b> холост<br>
+      <b>Телефон:</b> +7-000-000-0000 <br>
+      <b>E-mail:</b> <a href="mailto:#">имя.фамилия@yэл.почта</a><br>
+    </div>
+  </div>
+  </div><br>
+  <div>
+    <b>Образование:</b>
+Высшее (очное) Сибирский Федеральный Университет (2001-2007 г.г.)<br>
+<b>Специальность:</b> Инженер по специальности «Вычислительные машины, комплексы, системы и сети»
+
+  </div>
+  
+  
+  <div class="container-fluid">
+  <div ng-repeat="item in fc.items" class="row show-grid">
+<div class="col-xs-3 col-md-4"> {{item.jobTime}}</div>
+    <div class="col-xs-9 col-md-8">
+      <p><b>{{item.enterprise}}</b></p>
+      <p><b>Должность: </b>{{item.position}}</p>
+      <p><b>Должностные обязанности: </b></p>
+      <ul>
+    <li ng-repeat="each in item.duties">{{each}}</li>
+  </ul>
+      </div>
+  </div><br>
+</div>
+
+<div>
+  <b class="h4">Дополнительная информация:</b><br>
+<b>Знания иностранных языков:</b> могу читать технический английский со словарем.<br>
+<b>Владение компьютером:</b> уверенное (офисные программы, Windows Server 2008R2, Hyper-V, настройка АТС Panasonic, настройка сети, Active Directory, DNS, работа с железом, Git & Github, знание сетевых протоколов (FTP, HTTP, SSL, SMTP, POP3))<br>
+<b>Навыки программирования:</b><br>
+Разработка скриптов для администрирования на Visual Basic Script. Написание скриптов для Excel на VBA.<br>
+Front-end: написание веб страниц на HTML CSS  и Javascript с использованием Bootstrap. Базовые знания jQuery и Angular 1.5.<br>
+Back-end: базовые знания Node.js и Express.<br>
+<b>Личные качества:</b> ответственность, внимательность, математический склад ума, умение работать с большим количеством информации.<br>
+<br>
+<b class=h4>Ожидаемый уровень заработной платы:</b> 28 000 рублей.<br>
+Готов приступить к работе в ближайшее время.
+
+  
+</div><br>
+
+  </div>
+  <div class="h5 text-center"> Written and coded by
+  <a href="https://www.freecodecamp.com/v-sergeev">Valeriy Sergeev</a>.
+ </div><!-- подвал -->
+  </body>
+
+</html>
